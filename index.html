@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stonk Sim?</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <p>Stonks: <span id="stonks">0</span></p>
+      
+      <button onclick="increaseStonks()">
+        +<span id="stonksPerClick">1</span> Stonks
+      </button>
+
+      <p>Upgrades</p>
+
+      <button onclick="increaseStonksPerClick()">
+        +1 Stonks Per Click (Stonks Needed: <span id="upgradePrice">10</span>)
+      </button>
+      <button onclick="increaseStonksPerClick2()">
+        +5 Stonks Per Click (Stonks Needed: <span id="upgradePrice2">50</span>)
+      </button>
+
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>

@@ -4,6 +4,8 @@ let upgradePrice = 10;
 let upgradePrice2 = 50;
 let upgradePrice3 = 150;
 let upgradePrice4 = 250;
+let totalClicks = 0;
+let upgradesBought = 0;
 
 function updateUI() {
   document.getElementById('stonks').innerHTML = stonks.toFixed();
@@ -13,10 +15,13 @@ function updateUI() {
   document.getElementById('upgradePrice2').innerHTML = upgradePrice2.toFixed(0);
   document.getElementById('upgradePrice3').innerHTML = upgradePrice3.toFixed(0);
   document.getElementById('upgradePrice4').innerHTML = upgradePrice4.toFixed(0);
+  document.getElementById('upgradesBought').innerHTML = upgradesBought.toFixed(0);
+  document.getElementById('totalClicks').innerHTML = totalClicks.toFixed(0);
 }
 
 function increaseStonks() {
   stonks += stonksPerClick;
+  totalClicks += 1;
   updateUI();
 }
 
@@ -28,6 +33,7 @@ function increaseStonksPerClick() {
     stonks -= upgradePrice;
     stonksPerClick += 1;
     upgradePrice *= 1.5;
+    upgradesBought += 1;
     updateUI();
   }
 }
@@ -38,6 +44,7 @@ function increaseStonksPerClick2() {
     stonks -= upgradePrice2;
     stonksPerClick += 5;
     upgradePrice2 *= 2;
+    upgradesBought += 1;
     updateUI();
   }
 }
@@ -48,6 +55,7 @@ function increaseStonksPerClick3() {
     stonks -= upgradePrice3;
     stonksPerClick += 15;
     upgradePrice3 *= 2.5;
+    upgradesBought += 1;
     updateUI();
   }
 }
@@ -58,6 +66,7 @@ function increaseStonksPerClick4() {
     stonks -= upgradePrice4;
     stonksPerClick += 25;
     upgradePrice4 *= 3;
+    upgradesBought += 1;
     updateUI();
   }
 }

@@ -81,7 +81,7 @@ function increaseStonksPerClick5() {
   if (stonks >= upgradePrice5) {
     stonks -= upgradePrice5;
     stonksPerClick += 50;
-    upgradePrice5 *= 4;
+    upgradePrice5 *= 3.5;
     upgradesBought += 1;
     updateUI();
   }
@@ -92,7 +92,7 @@ function increaseStonksPerClick6() {
   if (stonks >= upgradePrice6) {
     stonks -= upgradePrice6;
     stonksPerClick *= 2;
-    upgradePrice6 *= 5;
+    upgradePrice6 *= 4.5;
     upgradesBought += 1;
     updateUI();
   }

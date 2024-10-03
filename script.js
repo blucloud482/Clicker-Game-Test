@@ -33,6 +33,10 @@ function updateUI() {
     Math.floor(upgradesBought).toLocaleString();
   document.getElementById('totalClicks').innerHTML =
     Math.floor(totalClicks).toLocaleString();
+  document.getElementById('presigePrice').innerHTML =
+    Math.floor(prestigePrice).toLocaleString();
+  document.getElementById('prestigeLevel').innerHTML =
+    Math.floor(prestigeLevel).toLocaleString();
 }
 
 function increaseStonks() {
@@ -112,11 +116,28 @@ function increaseStonksPerClick6() {
 //Prestige
 
 function prestige() {
-  if (score >= prestigePrice) {
-    score -= prestigePrice;
+  if (stonks >= prestigePrice) {
+    stonks -= prestigePrice;
     prestigeBonus *= 2;
     prestigePrice *= 10;
+    prestigeLevel += 1;
+    stonks = 0;
+    stonksPerClick = 1;
+    upgradePrice = 10;
+    upgradePrice2 = 50;
+    upgradePrice3 = 150;
+    upgradePrice4 = 250;
+    upgradePrice5 = 500;
+    upgradePrice6 = 1000;
+    updateUI();
   }
+}
+
+//DevTool
+
+function devTool() {
+  score += 1000000000;
+  totalClicks += 1000000000;
 }
 
 window.onload = updateUI;

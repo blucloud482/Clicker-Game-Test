@@ -1,3 +1,11 @@
+:root {
+  --background-color: #121212; /* Dark background */
+  --card-background: #1e1e1e; /* Slightly lighter background for cards */
+  --text-color: #ffffff; /* White text for contrast */
+  --secondary-color: #3a3a3a; /* Button background */
+  --hover-color: #555555; /* Lighter shade for button hover */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,23 +13,55 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  color: black;
-  background-color: darkgray;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 main {
   padding: 1rem;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Deeper shadow for depth */
+  max-width: 400px;
+  text-align: center;
 }
 
 h1 {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
+
 p {
-  font-weight: bold;
-  font-size: medium;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0.5rem 0;
 }
+
 button {
-  font-size: medium;
-  background-color: lightgray;
+  font-size: 1rem;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  color: var(--text-color); /* Button text color */
+}
+
+button:hover {
+  background-color: var(--hover-color); /* Change background on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }
